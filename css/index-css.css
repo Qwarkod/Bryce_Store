@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --header-background-color: #ffffff;
+    --header-color: #000000;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 10px;
+    transition: all 0.3s ease; 
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: darkorange;
+    box-shadow: 0 0 5px darkorange; 
+    transform: scale(1.5); 
+    border-radius: 12px; 
+}
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family: "Montserrat", serif;
+}
+
+.top-banner {
+    background-color: #000000;
+    color: #ffff;
+    text-align: center;
+    font-size: 16px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--header-background-color);
+    color: var(--header-color);
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 26px;
+    /* font-family: "Kanit", serif; */
+    font-family: "Bebas Neue", sans-serif;
+
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    font-family: "Oswald", serif;
+    margin-right: 1px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease; 
+}
+
+.nav-links a.about:hover {
+    color: rgb(255, 191, 0);
+}
+
+.nav-links a.contacts:hover {
+    color: rgb(255, 174, 0);
+}
+
+.language-toggle-style {
+    margin-left: 50px;
+}
+
+#language-toggle {
+    background-color: darkorange;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#language-toggle:hover {
+    background-color: rgb(163, 90, 0);
+}
+
+#language-toggle:active {
+    transform: scale(0.95);
+}
+
+
+
+.underlined {
+    text-decoration: underline;
+}
+
+.winter-color { 
+    color: #00fffb;
+}
+
+
+.background-container {
+    width: 100%;
+    height: 700px; 
+    background-image: url('../materials/bryce_sdark.png'); 
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    border-radius: 10px;
+}
+
+.text-firstblock {
+    position: absolute;
+    top: 50%; 
+    left: 0; 
+    transform: translateY(-50%); 
+    padding: 50px; 
+    color: white; 
+    font-size: 24px; 
+    width: 30%; 
+}
+
+.text-firstblock p {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+
+.view-button {
+
+    padding: 10px 24px;
+    font-size: 18px;
+    background-color: #f19408; 
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.view-button:hover {
+    background-color: #cc7a00;
+}
+
+@media (max-width: 768px) {
+    .text-firstblock {
+        position: static; /* Remove absolute positioning */
+        transform: none; /* Remove transform */
+        padding: 20px; /* Add padding for better spacing */
+        width: 100%; /* Make it full width */
+        text-align: center; /* Center align text */
+    }
+
+    .text-firstblock h2 {
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    .text-firstblock p {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .view-button {
+        font-size: 16px; /* Adjust button font size for mobile */
+        padding: 10px 20px; /* Adjust button padding for mobile */
+    }
+}
+
+
+.cart {
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+}
+
+.cart:hover {
+    background-color: #f0f0f0;
+}
+
+
+@media (max-width: 768px) { 
+    .language-toggle-style {
+        margin-left: 20px;
+    }
+}
+
+
+.kanit { 
+    font-family: "Kanit", serif;
+}
+
+
+
+.banner {
+    position: relative;
+}
+.banner__content {
+    background: url('background.jpg');
+    background-size: cover;
+}
+.banner svg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.banner svg path {
+    fill: #fff;
+}
+
+
+
+.divider {
+    width: 100px; 
+    height: 2px; 
+    border-radius: 10px;
+    background-color: #000; 
+    margin-bottom: 30px;
+}
+
+.second-block {
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання */
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    border-radius: 10px;
+    /* background-color: #ffffff; */
+    background: url('/materials/Background-ithems.png') no-repeat center center;
+    background-size: cover; 
+
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    padding: 20px; /* Додаткові відступи для зручності */
+}
+
+.oldclock-image {
+    background-image: url('../materials/oldclock.png'); /* Додаємо картинку */
+    background-size: 20%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px; /* Висота картинки */
+    margin: 20px 0; /* Відступи зверху та знизу */
+}
+
+.third-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.third-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.third-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.third-block {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.shoes-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 29%;
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s;
+    height: auto; /* Встановлюємо автоматичну висоту */
+    margin-bottom: 20px; /* Відступ між елементами */
+}
+
+.shoes-item img {
+    width: 80%; 
+    height: auto;
+    border-radius: 8px;
+    display: block; /* Забираємо зайвий простір навколо зображення */
+    margin: 0 auto; /* Центруємо зображення */
+}
+
+.shoes-item p {
+    margin-top: 10px; /* Відступ між текстом та зображенням */
+    font-size: 1.1em;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 4px;
+    width: 90%;
+    text-align: center;
+    position: static; /* Забираємо абсолютне позиціонування */
+    transform: none; /* Забираємо трансформації */
+}
+
+.shoes-item:hover {
+    transform: translateY(-4px);
+}
+
+@media (max-width: 1024px) {
+    .shoes-item {
+        width: 44%; 
+        height: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .shoes-item {
+        width: 100%; 
+        height: auto;
+    }
+}
+
+
+
+
+
+footer {
+    background-color: black; 
+    color: #fff; 
+    padding: 20px 40px; 
+}
+  
+.footer-container {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+  
+.footer-section {
+    flex: 1; 
+    min-width: 200px; 
+}
+  
+.footer-section h3 {
+    margin-bottom: 10px; 
+    font-size: 18px;
+    color: #f19408;
+}
+  
+.footer-section ul {
+    list-style: none; 
+    padding: 0;
+}
+  
+.footer-section ul li {
+    margin: 5px 0;
+}
+  
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+  
+.footer-section ul li a:hover {
+    color: #f19408; 
+}
+  
+.footer-section p {
+    margin: 5px 0; 
+    font-size: 14px;
+}
+  
+.footer-section i {
+    margin-right: 10px; 
+    color: #f19408; 
+}
+
+.social-icons {
+    margin-right: 50px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; 
+    gap: 25px; 
+}
+
+.social-icons a {
+    color: #555555;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f19408;
+}
+
+.all-rights-reserved {
+    text-align: center;
+    color: #464646;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center; /* Center align items */
+        text-align: center; /* Center align text */
+    }
+
+    .footer-section {
+        margin-bottom: 20px; /* Add margin between sections */
+    }
+
+    .social-icons {
+        margin: 20px 0; /* Adjust margin for better spacing */
+    }
+}
+
+#clouds {
+    display: block; 
+    position: relative; 
+    bottom: -5px; 
+    margin: 0; 
+    padding: 0; 
+}
+
+
+.link {
+    position: relative;
+    text-decoration: none;
+    font-size: 32px;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+  
+.link::after {
+    content: '→'; /* Стрілка */
+    position: absolute;
+    right: -40px; /* Відстань від тексту */
+    opacity: 0; /* Спочатку стрілка не видна */
+    transition: opacity 0.5s ease; /* Анімація появи */
+}
+  
+.link:hover::after {
+    opacity: 1; /* Стрілка з'являється при наведенні */
+}
+
+
+
+.link-shoes {
+    position: relative;
+    text-decoration: none;
+    font-size: 32px;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+  
+.link-shoes::after {
+    content: '→'; /* Стрілка */
+    position: absolute;
+    right: -40px; /* Відстань від тексту */
+    opacity: 0; /* Спочатку стрілка не видна */
+    transition: opacity 0.5s ease; /* Анімація появи */
+}
+  
+.link-shoes:hover::after {
+    opacity: 1; /* Стрілка з'являється при наведенні */
+}
+
+  
+
+
+.cart-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    transform: translateX(100%); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+.cart-modal.show {
+    transform: translateX(0); 
+}
+
+.cart-modal-content {
+    padding: 20px;
+    position: relative;
+}
+
+.cart-modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.empty-cart-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #888;
+}
+
+.empty-cart-message i {
+    margin-top: 400%;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.cart-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cart-divider {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(47% - 10px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.cart-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.cart-item p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.cart-item .remove-btn {
+    background-color: #c7c7c7;
+    color: #000000;
+    border: none;
+    padding: 10px 8px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-item .remove-btn:hover {
+    background-color: #dcdcdc;
+}
+
+.notificationWarn {
+    display: none;
+    position: fixed;
+    top: -50px; /* Початкове положення за межами екрану */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Плавний перехід */
+    opacity: 0; /* Початкова непрозорість */
+}
+
+.notificationWarn.show {
+    top: 20px; /* Кінцеве положення на екрані */
+    opacity: 1; /* Кінцева прозорість */
+}
+
+/* Додаємо медіа-запит для мобільних пристроїв */
+@media (max-width: 768px) {
+    .cart-modal {
+        width: 100%;
+    }
+}
+
+
+.notificationSuccess {
+    display: none;
+    position: fixed;
+    top: -50px; /* Початкове положення за межами екрану */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(29, 176, 0);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Плавний перехід */
+    opacity: 0; /* Початкова непрозорість */
+}
+
+.notificationSuccess.show {
+    top: 20px; /* Кінцеве положення на екрані */
+    opacity: 1; /* Кінцева прозорість */
+}
+
+.add-to-cart {
+    background-color: #ebebeb;
+    color: #000000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background-color: #bebebe;
+}
+
+
+
+
+
+.discount-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.discount-modal-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.discount-modal .close-discount-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.discount-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.discount-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.discount-item p {
+    margin: 10px 0;
+}
+
+#buy-now-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#buy-now-btn:hover {
+    background-color: #45a049;
+}
+
+#buy-now-btn-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#buy-now-btn-cart:hover {
+    background-color: #45a049;
+}
+
+.cart-item-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Add some space between the buttons */
+}
+
+.cart-item-buttons button {
+    flex: 1; /* Make buttons take equal space */
+    margin: 3px; /* Add some margin around the buttons */
+}
+
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 15px;
+    color: red;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: green;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
